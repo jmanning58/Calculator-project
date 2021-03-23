@@ -30,15 +30,19 @@ public class MainActivity extends AppCompatActivity {
         this.sevenB = findViewById(R.id.seven_button);
         this.eightB = findViewById(R.id.eight_button);
         this.nineB = findViewById(R.id.nine_button);
+
         this.decimalB = findViewById(R.id.decimal_point);
         this.clearB = findViewById(R.id.clear_button);
+
         this.totalB = findViewById(R.id.equals_button);
         this.addB = findViewById(R.id.add_button);
         this.minusB = findViewById(R.id.minus_button);
         this.divideB = findViewById(R.id.division_button);
         this.multiplyB = findViewById(R.id.multiply_button);
+
         this.display = findViewById(R.id.edit_field);
 
+        // All button displays
         oneB.setOnClickListener(v -> display.setText(display.getText() + "1"));
         twoB.setOnClickListener(v -> display.setText(display.getText() + "2"));
         threeB.setOnClickListener(v -> display.setText(display.getText() + "3"));
@@ -50,6 +54,13 @@ public class MainActivity extends AppCompatActivity {
         nineB.setOnClickListener(v -> display.setText(display.getText() + "9"));
         zeroB.setOnClickListener(v -> display.setText(display.getText() + "0"));
 
-        addB.setOnClickListener(v -> display.setText(display.getText() + "2"));
+        decimalB.setOnClickListener(v -> display.setText(display.getText() + "."));
+        clearB.setOnClickListener(v -> display.setText(display.getText() + "")); // Doesn't work yet
+
+        // Just button displays, nothing else yet
+        addB.setOnClickListener(v -> display.setText(display.getText() + " + "));
+        minusB.setOnClickListener(v -> display.setText(display.getText() + " - "));
+        divideB.setOnClickListener(v -> display.setText(display.getText() + " / "));
+        multiplyB.setOnClickListener(v -> display.setText(display.getText() + " * "));
     }
 }
